@@ -62,26 +62,40 @@
 
 <script>
    
- //--------------------------- play icon working (on click) ------------------------
- 
     $('.welcome-screen button').on('click', function() {
     var name = $('#name-input').val();           // name stores the value from input
-     if(name.length>=2){
-    var message = "Welcome, " + name;            //Displays the message
-    $('.main .user-name').text(message);
-    $('.welcome-screen').addClass('hidden');
-    $('.main').removeClass('hidden');
-    $(".content h1").text(message);
+    if(name.length > 3){
+      var message = "Welcome, " + name;            //Displays the message
+      $('.main .user-name').text(message);
+      $('.welcome-screen').addClass('hidden');
+      $('.main').removeClass('hidden');
+      $(".content h1").text(message);
      }
      else{
          $("input").addClass("error"); 
      }
 });
+ //--------------------------- play icon working (on click) ------------------------
+ 
+   $(".play-icon").click(function(){
+        var song = document.querySelector('audio');
+        if(song.paused == true)
+            {
+                console.log('playing');
+                $(".play-icon").removeClass('fa-play').addClass('fa-pause');  // chaining
+                  song.play();
+            }
+        else{
+            console.log('pausing');
+            $(".play-icon").removeClass('fa-pause').addClass('fa-play');   //  chaining
+             song.pause();
+            
+        }
+    }); 
 
-     
  // -------------------------------------------------------------------------------
     
-// --------------------------- Spacebar event -------------------------------------
+ // --------------------------- Spacebar event -------------------------------------
     
     
     
