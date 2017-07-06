@@ -61,6 +61,22 @@
 <script src="jquery.js"> </script>
 
 <script>
+ //------------------------------- Functions --------------------------------------
+   
+    function toggleSong() {                                // Here a func. is created called togglesong
+        var song = document.querySelector('audio');
+        if(song.paused == true) {
+            console.log('Playing');
+            $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+            song.play();
+        }
+        else {
+            console.log('Pausing');
+            $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+            song.pause();
+        }
+    } 
+ //--------------------------------------------------------------------------------
    
     $('.welcome-screen button').on('click', function() {
     var name = $('#name-input').val();           // name stores the value from input
@@ -78,51 +94,26 @@
  //--------------------------- play icon working (on click) ------------------------
  
    $(".play-icon").click(function(){
-        var song = document.querySelector('audio');
-        if(song.paused == true)
-            {
-                console.log('playing');
-                $(".play-icon").removeClass('fa-play').addClass('fa-pause');  // chaining
-                  song.play();
-            }
-        else{
-            console.log('pausing');
-            $(".play-icon").removeClass('fa-pause').addClass('fa-play');   //  chaining
-             song.pause();
-            
-        }
-    }); 
+       toggleSong();                             // Here togglesong func. is called
+    });  
 
- // -------------------------------------------------------------------------------
+ // --------------------------------------------------------------------------------
     
  // --------------------------- Spacebar event -------------------------------------
      $("body").keypress(function(event){
         if( event.keyCode == 32)
             {
-               var song = document.querySelector('audio');
-               if(song.paused == true)
-                  {
-                    console.log('playing');
-                    $(".play-icon").removeClass('fa-play').addClass('fa-pause');  // chaining
-                    song.play();
-                  }  
-         
-        else
-            {
-                console.log('pausing');
-                $(".play-icon").removeClass('fa-pause').addClass('fa-play');   //  chaining
-                 song.pause();
-            }
+                toggleSong();                   // Here togglesong func. is called
       }
     });
     
     
-// -------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 
-// ------------------------------------- Current time & duration of song ---------------
+// ------------------------------------- Current time & duration of song ------------
    
     
-// ------------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
  </script>
  </body>
 
