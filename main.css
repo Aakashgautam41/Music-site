@@ -111,7 +111,7 @@ h1 {
     width: 0;
 
 }
-
+ 
 .main .content {
     width: 800px;
     margin: 2rem auto;
@@ -156,6 +156,7 @@ h1 {
 
 .song .song-duration {
     text-align: right;
+   
 }
 
 .song-list .song:hover {
@@ -165,4 +166,8 @@ h1 {
 
 .song-length {
     text-align: right;
+}
+
+.progress-wrapper span {
+    color: black;
 }

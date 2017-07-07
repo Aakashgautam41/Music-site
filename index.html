@@ -56,11 +56,13 @@
             </footer>
         </div>
     </div>
+    
 <!------------------------------------------------- JavaScript starts here ------------------------------>
 
 <script src="jquery.js"> </script>
 
 <script>
+    
  //------------------------------- Functions --------------------------------------
    
     function toggleSong() {                                // Here a func. is created called togglesong
@@ -76,6 +78,16 @@
             song.pause();
         }
     } 
+    
+    function updateCurrentTime(){
+        var song = document.querySelector("audio");
+      //  console.log(song.currentTime);
+      //  console.log(song.duration);
+        var currentTime = Math.floor(song.currentTime);
+        var duration = Math.floor(song.duration);
+        $(".time-elapsed").text(currentTime);
+        $(".song-duration").text(duration);
+    }
  //--------------------------------------------------------------------------------
    
     $('.welcome-screen button').on('click', function() {
@@ -91,6 +103,7 @@
          $("input").addClass("error"); 
      }
 });
+
  //--------------------------- play icon working (on click) ------------------------
  
    $(".play-icon").click(function(){
@@ -111,7 +124,13 @@
 // ----------------------------------------------------------------------------------
 
 // ------------------------------------- Current time & duration of song ------------
-   
+   window.onload = function()
+   {   
+      updateCurrentTime();
+      setInterval(function(){
+           updateCurrentTime();
+      },1000);
+   }
     
 // ---------------------------------------------------------------------------------- 
  </script>
