@@ -195,8 +195,8 @@
 
 // ------------------------------------- Current time & duration of song ------------
  
-      var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];  // songlist using array
-      var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];                   // song files using array
+   var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];  // songlist using array
+   var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];                   // song files using array
  
    window.onload = function()
    {  
@@ -214,66 +214,16 @@
 
 // --------------------------------------- playlist songs ----------------------------
  
-//   $('#song1').click(function() {
-//   var audio = document.querySelector('audio');
-//   var currentSong = audio.src;
-//   if(currentSong.search(fileNames[0]) != -1)              // it is searching song name in audio src
-//   {
-//   toggleSong();
-//   }
-//   else {
-//   audio.src = fileNames[0];
-//   toggleSong();
-//  }
-//  });
-//    
-//   $('#song2').click(function() {
-//   var audio = document.querySelector('audio');            
-//   var currentSong = audio.src;
-//   if(currentSong.search(fileNames[1]) != -1)              // it is searching song name in audio src
-//   {
-//   toggleSong();
-//   }
-//   else {
-//   audio.src = fileNames[1];
-//   toggleSong();
-//  }
-//  });
-//       
-//    
-//   $('#song3').click(function() {
-//   var audio = document.querySelector('audio');
-//   var currentSong = audio.src;
-//   if(currentSong.search(fileNames[2]) != -1)           // it is searching song name in audio src
-//   {
-//   toggleSong();
-//   }
-//   else {
-//   audio.src = fileNames[2];
-//   toggleSong();
-//  }
-//  });
-//        
-//  
-//   $('#song4').click(function() {
-//   var audio = document.querySelector('audio');
-//   var currentSong = audio.src;
-//   if(currentSong.search(fileNames[3]) != -1)         // it is searching song name in audio src
-//   {
-//   toggleSong();
-//   }
-//   else {
-//   audio.src = fileNames[3];
-//   toggleSong();
-//  }
-//  });
   
-    addSongNameClickEvent(fileNames[0],1);                     // calling of function
-    addSongNameClickEvent(fileNames[1],2);
-    addSongNameClickEvent(fileNames[2],3);
-    addSongNameClickEvent(fileNames[3],4); 
+//    addSongNameClickEvent(fileNames[0],1);                     // calling of addSongNameClickEvent() function
+//    addSongNameClickEvent(fileNames[1],2);
+//    addSongNameClickEvent(fileNames[2],3);
+//    addSongNameClickEvent(fileNames[3],4); 
     
-   
+      
+      for (var i = 0; i < fileNames.length ; i++) {
+           addSongNameClickEvent(fileNames[i],i+1)
+          } 
    
    
    
