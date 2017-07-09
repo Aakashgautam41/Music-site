@@ -173,12 +173,12 @@
 
 // ------------------------------------- Current time & duration of song ------------
  
-      var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];
-      var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];
+      var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];  // songlist using array
+      var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];                   // song files using array
  
    window.onload = function()
    {  
-      $('#song1 .song-name').text(songList[0]);
+      $('#song1 .song-name').text(songList[0]);                            
       $('#song2 .song-name').text(songList[1]);
       $('#song3 .song-name').text(songList[2]);
       $('#song4 .song-name').text(songList[3]);
@@ -191,34 +191,60 @@
 // -----------------------------------------------------------------------------------
 
 // --------------------------------------- playlist songs ----------------------------
-   
+ 
    $('#song1').click(function() {
-       var audio = document.querySelector('audio');
-       audio.src = fileNames[0];
-       //audio.play();
-       toggleSong();
-     });
+   var audio = document.querySelector('audio');
+   var currentSong = audio.src;
+   if(currentSong.search(fileNames[0]) != -1)              // it is searching song name in audio src
+   {
+   toggleSong();
+   }
+   else {
+   audio.src = fileNames[0];
+   toggleSong();
+  }
+  });
     
-       $('#song2').click(function() {
-       var audio = document.querySelector('audio');
-       audio.src = fileNames[1];
-       //audio.play();
-       toggleSong();
-     });
+   $('#song2').click(function() {
+   var audio = document.querySelector('audio');            
+   var currentSong = audio.src;
+   if(currentSong.search(fileNames[1]) != -1)              // it is searching song name in audio src
+   {
+   toggleSong();
+   }
+   else {
+   audio.src = fileNames[1];
+   toggleSong();
+  }
+  });
+       
     
-       $('#song3').click(function() {
-       var audio = document.querySelector('audio');
-       audio.src = fileNames[2];
-       //audio.play();
-       toggleSong();
-     });
-    
-       $('#song4').click(function() {
-       var audio = document.querySelector('audio');
-       audio.src = fileNames[3];
-       //audio.play();
-       toggleSong();
-     });
+   $('#song3').click(function() {
+   var audio = document.querySelector('audio');
+   var currentSong = audio.src;
+   if(currentSong.search(fileNames[2]) != -1)           // it is searching song name in audio src
+   {
+   toggleSong();
+   }
+   else {
+   audio.src = fileNames[2];
+   toggleSong();
+  }
+  });
+        
+  
+   $('#song4').click(function() {
+   var audio = document.querySelector('audio');
+   var currentSong = audio.src;
+   if(currentSong.search(fileNames[3]) != -1)         // it is searching song name in audio src
+   {
+   toggleSong();
+   }
+   else {
+   audio.src = fileNames[3];
+   toggleSong();
+  }
+  });
 
 // -----------------------------------------------------------------------------------
  </script>
