@@ -108,7 +108,7 @@ h1 {
     background-color: #959595;
     height: 8px;
     border-radius: 4px;
-    width: 0;
+    width: 0%;
 
 }
  
@@ -170,4 +170,10 @@ h1 {
 
 .progress-wrapper span {
     color: black;
+}
+ 
+.song > span {
+    display: inline-block;
+    width: 150px;
+    height: 1.1rem;
 }

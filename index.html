@@ -24,13 +24,33 @@
                 <div class="right floated user-name"> </div>
             </header>
             <section class="content">
-                <audio src="song.mp3"></audio>
+                <audio src="song1.mp3"></audio>
+                <audio src="song2.mp3"></audio>
+                <audio src="song3.mp3"></audio>
+                <audio src="song4.mp3"></audio>
                 <div class="list-headers">
         <div> Title </div> 
         <div> Artist </div>
         <div> Album </div>
         <div> Duration </div>
         </div>
+        
+    <div class="song-list">
+    <div class="song" id="song1">
+    <span class="song-name"> </span>
+    </div>
+    <div class="song" id="song2">
+    <span class="song-name"> </span>
+    </div>
+    <div class="song"id="song3">
+    <span class="song-name"> </span>
+    </div>
+    <div class="song"id="song4">
+    <span class="song-name"> </span>
+    </div>
+    
+    </div>
+<!--
         <div class="song-list">
         <div class="song">
         <span class="song-name"></span>
@@ -39,6 +59,7 @@
         <span class="song-length"></span>
         </div>
         </div>
+-->
             </section>
             <footer>
                 <div class="controls">
@@ -99,6 +120,7 @@
     ret += "" + secs;
     return ret;
 }
+ 
     
  // -------------------------------------------------------------------------------  
     
@@ -133,6 +155,7 @@
  
    $(".play-icon").click(function(){
        toggleSong();                             // Here togglesong func. is called
+    
     });  
 
  // --------------------------------------------------------------------------------
@@ -149,15 +172,55 @@
 // ----------------------------------------------------------------------------------
 
 // ------------------------------------- Current time & duration of song ------------
+ 
+      var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];
+      var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];
+ 
    window.onload = function()
-   {   
+   {  
+      $('#song1 .song-name').text(songList[0]);
+      $('#song2 .song-name').text(songList[1]);
+      $('#song3 .song-name').text(songList[2]);
+      $('#song4 .song-name').text(songList[3]);
       updateCurrentTime();
       setInterval(function(){
            updateCurrentTime();
       },1000);
    }
     
-// ---------------------------------------------------------------------------------- 
+// -----------------------------------------------------------------------------------
+
+// --------------------------------------- playlist songs ----------------------------
+   
+   $('#song1').click(function() {
+       var audio = document.querySelector('audio');
+       audio.src = fileNames[0];
+       //audio.play();
+       toggleSong();
+     });
+    
+       $('#song2').click(function() {
+       var audio = document.querySelector('audio');
+       audio.src = fileNames[1];
+       //audio.play();
+       toggleSong();
+     });
+    
+       $('#song3').click(function() {
+       var audio = document.querySelector('audio');
+       audio.src = fileNames[2];
+       //audio.play();
+       toggleSong();
+     });
+    
+       $('#song4').click(function() {
+       var audio = document.querySelector('audio');
+       audio.src = fileNames[3];
+       //audio.play();
+       toggleSong();
+     });
+
+// -----------------------------------------------------------------------------------
  </script>
  </body>
 
