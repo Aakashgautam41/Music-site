@@ -111,6 +111,9 @@
  
    var songList = ['Tamma song','humma song','Nashe si chad gayi','The breakup song'];  // songlist using array
    var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];                   // song files using array
+
+
+
  
    window.onload = function()
    {  
@@ -138,7 +141,8 @@
       for (var i = 0; i < fileNames.length ; i++) {
            addSongNameClickEvent(fileNames[i],i+1)
           } 
-   
+
+ 
    
    
 // -----------------------------------------------------------------------------------
