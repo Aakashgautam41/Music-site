@@ -209,7 +209,7 @@
 
    window.onload = function()
    {  
-         
+         changeCurrentSongDetails(songs[0]);
 //       for(var i =0; i < songList.length;i++) {
 //        var name = '#song' + (i+1);
 //        var song = $(name);x
