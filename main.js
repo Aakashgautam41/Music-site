@@ -1,7 +1,7 @@
 
      var songs = [{
-        'name': 'Badri Ki Dulhania (Title Track)',
-        'artist': 'Neha Kakkar, Monali Thakur, Ikka Singh, Dev Negi',
+        'name': 'Tamma tamma song',
+        'artist': 'Neha Kakkar, Monali Thakur',
         'album': 'Badrinath ki Dulhania',
         'duration': '2:56',
        'fileName': 'song1.mp3',
@@ -9,7 +9,7 @@
     },
     {
         'name': 'Humma Song',
-        'artist': 'Badshah, Jubin Nautiyal, Shashaa Tirupati',
+        'artist': 'Badshah, Jubin Nautiyal',
         'album': 'Ok Jaanu',
         'duration': '3:15',
         'fileName': 'song2.mp3',
@@ -25,7 +25,7 @@
     },
     {
         'name': 'The Breakup Song',
-        'artist': 'Nakash Aziz, Arijit Singh, Badshah, Jonita Gandhi',
+        'artist': 'Nakash Aziz, Arijit Singh',
         'album': 'Ae Dil Hai Mushkil',
         'duration': '2:29',
         'fileName': 'song4.mp3',
@@ -210,6 +210,7 @@
    window.onload = function()
    {  
          changeCurrentSongDetails(songs[0]);
+        
 //       for(var i =0; i < songList.length;i++) {
 //        var name = '#song' + (i+1);
 //        var song = $(name);x
@@ -234,6 +235,9 @@
       setInterval(function(){
            updateCurrentTime();
       },1000);
+       $('#songs').DataTable({
+        paging: false
+        });
    }
    
    
