@@ -22,7 +22,7 @@ h1 {
 .wrapper {
     height: 100%;
     width: 100%;
-    background-color: #BBB;
+    background-color: darkcyan;
 }
 
 .welcome-screen {
@@ -37,7 +37,11 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
+h1 {
+  animation-duration: s;
+  animation-delay: 1s;
+  animation-iteration-count:3;
+}
 .main {
     width: 100%;
     height: 100%;
@@ -46,6 +50,7 @@ h1 {
     color: white;
     background-color:#282828;
 }
+
 
 .main header {
     height: 80px;
@@ -102,19 +107,20 @@ h1 {
 .player-progress {
     height: 8px;
     width: 700px;
-    background-color: darkseagreen;
+    background-color: white;
     border-radius: 4px;
     margin-right: 6px;
     margin-left: 6px;
 }
 
 .progress-filled {
-    background-color: #959595;
+    background-color: lightskyblue;
     height: 8px;
     border-radius: 4px;
-    width: 0%;
+    width: 50%;
 
 }
+ 
  
 .main .content {
     width: 800px;
@@ -276,3 +282,32 @@ table.dataTable.no-footer {
     
 }
  
+
+/* -------------------------------------  Drum kit button ---------------------------------------------*/
+
+.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:#ff7518;
+    border: none;
+    border-radius:50px;
+    font-size: 18px;
+    color: white;
+    margin-left: 650px;
+    margin-top: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------*/
