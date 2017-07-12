@@ -26,6 +26,10 @@ h1 {
 }
 
 .welcome-screen {
+    background-image:url(img/pexels-photo-89957.jpeg);
+    background-size: cover;
+    color:#fffffa;
+    
     height: 100%;
     width: 100%;
     display: flex;
@@ -228,9 +232,11 @@ table.dataTable tbody tr {
 }
 
 #songs_filter input {
-    width: 400px;
+    width: 300px;
+ 
+    
     border: none;
-    font-size: 16px;
+    font-size: 17px;
     border-radius: 20px;
 }
 
