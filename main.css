@@ -287,7 +287,11 @@ table.dataTable.no-footer {
     border-bottom: 1px solid gray !important;
     
 }
- 
+
+#songs{
+    height: 255px;
+    width:800px !important;
+}
 
 /* -------------------------------------  Drum kit button ---------------------------------------------*/
 
@@ -296,7 +300,7 @@ table.dataTable.no-footer {
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color:#ff7518;
+    background-color:lightseagreen;
     border: none;
     border-radius:50px;
     font-size: 18px;
@@ -310,6 +314,7 @@ a{
     color: white;
 }
 
+ 
 
 
 
