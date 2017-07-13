@@ -157,21 +157,57 @@
 
 
 
-
+ // ------------------------------ input name function ----------------------------
    
-    $('.welcome-screen button').on('click', function() {
-    var name = $('#name-input').val();           // name stores the value from input
-    if(name.length > 3){
-      var message = "Welcome, " + name;            //Displays the message
-      $('.main .user-name').text(message);
-      $('.welcome-screen').addClass('hidden');
-      $('.main').removeClass('hidden');
-      $(".content h1").text(message);
-     }
-     else{
-         $("input").addClass("error"); 
-     }
-});
+
+
+
+ // --------------------------------------------------------------------------------
+
+ // ------------------------------ input Email function ----------------------------
+   
+//    $('.welcome-screen button').on('click', function() {
+//    var email = $('#email-input').val();           // name stores the value from input
+//    if(email.search('test@acadview.com') != -1){
+//      var message = "Welcome, " + name;            //Displays the message
+//      $('.main .user-name').text(message);
+//      $('.welcome-screen').addClass('hidden');
+//      $('.main').removeClass('hidden');
+//      $(".content h1").text(message);
+//     }
+//     else{
+//         $("#email-input").addClass("error"); 
+//     }
+//});
+//
+//
+//// // --------------------------------------------------------------------------------
+////
+////
+////
+//// // ------------------------------ input password function ----------------------------
+//   
+//    $('.welcome-screen button').on('click', function() {
+//    var pass = $('#pass-input').val();           // name stores the value from input
+//    if(pass.search('JavascriptRocks')!=-1){
+//      var message = "Welcome, " + name;            //Displays the message
+//      $('.main .user-name').text(message);
+//      $('.welcome-screen').addClass('hidden');
+//      $('.main').removeClass('hidden');
+//      $(".content h1").text(message);
+//     }
+//     else{
+//         $("#pass-input").addClass("error"); 
+//     }
+//});
+
+
+ // --------------------------------------------------------------------------------
+
+
+
+
+
 
  //--------------------------- play icon working (on click) ------------------------
  

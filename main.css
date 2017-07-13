@@ -289,8 +289,18 @@ table.dataTable.no-footer {
 }
 
 #songs{
-    height: 255px;
+    height: 200px;
     width:800px !important;
+}
+
+input{
+    margin-bottom: 10px;
+}
+.btn2{
+    width: 173px;
+    border: none;
+    border-radius: 8px;
+    background-color: seagreen;
 }
 
 /* -------------------------------------  Drum kit button ---------------------------------------------*/
