@@ -160,6 +160,24 @@
  // ------------------------------ input name function ----------------------------
    
 
+    $('.welcome-screen button').on('click', function() {
+    var name = $('#name-input').val();    
+         var email = $('#email-input').val();  
+         var pass = $('#pass-input').val();           
+        // name stores the value from input
+    if(name.length > 3 && email.search('test@acadview.com') != -1 && pass.search('JavascriptRocks')!=-1){
+      var message = "Welcome, " + name;          //Displays the message
+        
+      $('.main .user-name').text(message);
+      $('.welcome-screen').addClass('hidden');
+      $('.main').removeClass('hidden');
+      $(".content h1").text(message);
+     }
+     else{
+         $("#name-input").addClass("error"); 
+     }
+       
+});
 
 
  // --------------------------------------------------------------------------------
