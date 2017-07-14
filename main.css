@@ -300,7 +300,21 @@ input{
     width: 173px;
     border: none;
     border-radius: 8px;
-    background-color: seagreen;
+    background-color: lightskyblue;
+}
+
+.btn2:hover{
+    width: 173px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkgoldenrod;
+    color: black;
+}
+.fa{
+    margin-left: 40px;
+}
+.fa.disabled {
+    color: gray;
 }
 
 /* -------------------------------------  Drum kit button ---------------------------------------------*/

@@ -1,3 +1,8 @@
+ var currentSongNumber = 1;
+ var willLoop = 0;
+ var willShuffle = 0; // will use this soon
+
+
 
      var songs = [{
         'name': 'Tamma tamma song',
@@ -60,6 +65,66 @@
             song.pause();
         }
     }
+
+
+ // ---------------------------------------- music icons --------------------------
+
+$(function(){
+ 
+    $('.mute').click(function(){
+        $('.mute').removeClass('fa-volume-up').addClass('fa-volume-off');
+    })
+})
+
+$(function(){
+    $('.shuffle').click(function(){
+        $('.shuffle').fadeTo(1,.5);
+    })
+})
+
+
+
+$('.fa-repeat').on('click',function() {
+    $('.fa-repeat').toggleClass('disabled')
+    willLoop = 1 - willLoop;
+});
+
+
+
+$('.fa-random').on('click',function() {
+    $('.fa-random').toggleClass('disabled')
+    willShuffle = 1 - willShuffle;
+});
+
+
+function timeJump() {
+    var song = document.querySelector('audio')
+    song.currentTime = song.duration - 5;
+}
+
+
+
+
+
+$('audio').on('ended',function() {
+    var audio = document.querySelector('audio');
+    if(currentSongNumber < 4) {
+        var nextSongObj = songs[currentSongNumber];
+        audio.src = nextSongObj.fileName; // Change Soure
+        toggleSong(); // Play Next Song
+        changeCurrentSongDetails(nextSongObj); // Update Image
+        currentSongNumber = currentSongNumber + 1; // Change State
+    }
+    else {
+        $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+        audio.currentTime = 0;
+    }
+})
+
+
+
+
+ // -------------------------------------------------------------------------------
     
     // ------------------------- fancy time format finc.----------------------------
     
@@ -274,7 +339,7 @@
 
    window.onload = function()
    {  
-         changeCurrentSongDetails(songs[0]);
+         changeCurrentSongDetails(songs[1]);
         
 //       for(var i =0; i < songList.length;i++) {
 //        var name = '#song' + (i+1);
@@ -333,3 +398,4 @@
    
    
 // -----------------------------------------------------------------------------------
+ 
