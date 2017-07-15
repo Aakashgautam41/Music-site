@@ -5,34 +5,34 @@
 
 
      var songs = [{
-        'name': 'Tamma tamma song',
-        'artist': 'Neha Kakkar, Monali Thakur',
-        'album': 'Badrinath ki Dulhania',
-        'duration': '2:56',
+        'name': ' Boulevard of Broken Dreams',
+        'artist': 'Green Day',
+        'album': ' American Idiot',
+        'duration': '4:41',
        'fileName': 'song1.mp3',
          'image': 'song1.jpg'
     },
     {
-        'name': 'Humma Song',
-        'artist': 'Badshah, Jubin Nautiyal',
-        'album': 'Ok Jaanu',
-        'duration': '3:15',
+        'name': 'Shape of you',
+        'artist': 'Ed Sheeran',
+        'album': 'Divide',
+        'duration': '3:53',
         'fileName': 'song2.mp3',
          'image': 'song2.jpg'
     },
     {
-        'name': 'Nashe Si Chadh Gayi',
-        'artist': 'Arijit Singh',
-        'album': 'Befikre',
-        'duration': '2:34',
+        'name': 'Warning',
+        'artist': 'Green Day',
+        'album': 'Warning',
+        'duration': '3:42',
         'fileName': 'song3.mp3',
          'image': 'song3.jpg'
     },
     {
-        'name': 'The Breakup Song',
-        'artist': 'Nakash Aziz, Arijit Singh',
-        'album': 'Ae Dil Hai Mushkil',
-        'duration': '2:29',
+        'name': 'Show Me The Meaning Of Being Lonely',
+        'artist': 'Backstreet Boys',
+        'album': 'Millennium',
+        'duration': '3:35',
         'fileName': 'song4.mp3',
          'image': 'song4.jpg'
     }]
@@ -121,8 +121,36 @@ $('audio').on('ended',function() {
     }
 })
 
-
-
+//
+//$('audio').on('ended',function() {
+//    var audio = document.querySelector('audio');
+//    if (willShuffle == 1) {
+//        var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
+//        var nextSongObj = songs[nextSongNumber-1];
+//        audio.src = nextSongObj.fileName;
+//        toggleSong();
+//        changeCurrentSongDetails(nextSongObj);
+//        currentSongNumber = nextSongNumber;
+//    }
+//    else if(currentSongNumber < 4) {
+//        var nextSongObj = songs[currentSongNumber];
+//        audio.src = nextSongObj.fileName;
+//        toggleSong();
+//        changeCurrentSongDetails(nextSongObj);
+//        currentSongNumber = currentSongNumber + 1;
+//    }
+//    else if(willLoop == 1) {
+//        var nextSongObj = songs[0];
+//        audio.src = nextSongObj.fileName;
+//        toggleSong();
+//        changeCurrentSongDetails(nextSongObj);
+//        currentSongNumber =  1;
+//    }
+//    else {
+//        $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+//        audio.currentTime = 0;
+//    }
+//})
 
  // -------------------------------------------------------------------------------
     
@@ -339,7 +367,7 @@ $('audio').on('ended',function() {
 
    window.onload = function()
    {  
-         changeCurrentSongDetails(songs[1]);
+         changeCurrentSongDetails(songs[0]);
         
 //       for(var i =0; i < songList.length;i++) {
 //        var name = '#song' + (i+1);

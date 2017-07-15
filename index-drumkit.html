@@ -6,9 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   
+  
     
   <div>
     <button class="btn"><a href="index.html">Back</a></button>
+    
+     <div class="img">
+       <img src="img/CT1-R444-PB.png" alt="">
+   </div>
    
     <div class="keys">
     <div data-key="65" class="key">
@@ -80,6 +86,11 @@
   const keys = Array.from(document.querySelectorAll('.key'));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
+    
+    
+// $('.img').keypress(function(){
+//     $('img').addClass(animated shake);
+// });
 </script>
 
 
