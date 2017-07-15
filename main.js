@@ -254,12 +254,12 @@ $('audio').on('ended',function() {
    
 
     $('.welcome-screen button').on('click', function() {
-    var name = $('#name-input').val();    
+    var name = $('#name-input').val();                                  // name stores the value from input 
          var email = $('#email-input').val();  
          var pass = $('#pass-input').val();           
-        // name stores the value from input
+       
     if(name.length > 3 && email.search('test@acadview.com') != -1 && pass.search('JavascriptRocks')!=-1){
-      var message = "Welcome, " + name;          //Displays the message
+      var message = "Welcome, " + name;                               //Displays the message
         
       $('.main .user-name').text(message);
       $('.welcome-screen').addClass('hidden');
@@ -275,51 +275,8 @@ $('audio').on('ended',function() {
 
  // --------------------------------------------------------------------------------
 
- // ------------------------------ input Email function ----------------------------
-   
-//    $('.welcome-screen button').on('click', function() {
-//    var email = $('#email-input').val();           // name stores the value from input
-//    if(email.search('test@acadview.com') != -1){
-//      var message = "Welcome, " + name;            //Displays the message
-//      $('.main .user-name').text(message);
-//      $('.welcome-screen').addClass('hidden');
-//      $('.main').removeClass('hidden');
-//      $(".content h1").text(message);
-//     }
-//     else{
-//         $("#email-input").addClass("error"); 
-//     }
-//});
-//
-//
-//// // --------------------------------------------------------------------------------
-////
-////
-////
-//// // ------------------------------ input password function ----------------------------
-//   
-//    $('.welcome-screen button').on('click', function() {
-//    var pass = $('#pass-input').val();           // name stores the value from input
-//    if(pass.search('JavascriptRocks')!=-1){
-//      var message = "Welcome, " + name;            //Displays the message
-//      $('.main .user-name').text(message);
-//      $('.welcome-screen').addClass('hidden');
-//      $('.main').removeClass('hidden');
-//      $(".content h1").text(message);
-//     }
-//     else{
-//         $("#pass-input").addClass("error"); 
-//     }
-//});
-
-
- // --------------------------------------------------------------------------------
-
-
-
-
-
-
+  
+ 
  //--------------------------- play icon working (on click) ------------------------
  
    $(".play-icon").click(function(){
@@ -341,15 +298,29 @@ $('audio').on('ended',function() {
  // --------------------------------- progress bar finc.----------------------------
 
  
-
-
+var $audio = $('#myAudio');
+$('input').on('change', function(e) {
+  var target = e.currentTarget;
+  var file = target.files[0];
+  var reader = new FileReader();
+  
+  console.log($audio[0]);
+   if (target.files && file) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $audio.attr('src', e.target.result);
+            $audio.play();
+        }
+        reader.readAsDataURL(file);
+    }
+});
+ 
+ 
+ 
 
  // --------------------------------------------------------------------------------
 
 
-
-    
-// ----------------------------------------------------------------------------------
 
 // ------------------------------------- Current time & duration of song ------------
  
@@ -400,15 +371,9 @@ $('audio').on('ended',function() {
    
    
        
-   
-   
+ // -----------------------------------------------------------------------------------
 
-
-
-
-// -----------------------------------------------------------------------------------
-
-// --------------------------------------- playlist songs ----------------------------
+ // --------------------------------------- playlist songs ----------------------------
       
        
   
@@ -424,6 +389,5 @@ $('audio').on('ended',function() {
 
  
    
-   
-// -----------------------------------------------------------------------------------
+ // -----------------------------------------------------------------------------------
  
