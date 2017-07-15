@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    
 
 </head>
      
 <body>
     <div class="wrapper">
-        <section class="welcome-screen  hidden">
+        <section class="welcome-screen">
             <h1 class="animated bounce"> Welcome to Songify </h1>
             <h3> Enter name to access your account </h3>
             <div class="input-wrapper">
@@ -29,19 +30,36 @@
                 <button class="btn2"> <b>Go</b> </button>
             </div>
         </section>
-        <div class="main ">
+        <div class="main hidden">
             <header>
                 <div class="right floated user-name"> </div>
             </header>
-            <section class="content">
+            
+            <div class="row">
+                <div class="col-md-2">
+                   <div>
+                     
+                      <div class="marg"><span> Select local files on computer</span> </div>
+                      <input type="file" id="local">
+                      <audio id="myAudio"  autoplay></audio> 
+                   </div>
+                   
+  
+                </div>
+                
+                   
+                   
+                   
+                <div class="col-md-10">
+                <section class="content">
                 <audio src="song1.mp3"></audio>
                 <audio src="song2.mp3"></audio>
                 <audio src="song3.mp3"></audio>
                 <audio src="song4.mp3"></audio>
-       <div class="songs">
+           <div class="songs">
                 
-                <table id="songs">
-    <thead class="list-headers">
+           <table id="songs">
+            <thead class="list-headers">
             <tr><td> Title </td>
             <td> Artist </td>
             <td> Album </td>
@@ -73,23 +91,23 @@
                 <td class="song-length"></td>
             </tr>
         <!-- </div> -->
-    </tbody>
-                </table>
+            </tbody>
+            </table>
                  
            </div>
            <div class="current-song-wrapper">
-        <img src="img/song2.jpg" class="current-song-image">
-        <div>
-        <p class="current-song-name">Tamma Tamma Again</p>
-        <p class="current-song-album">Badrinath ki Dulhania</p>
-       	</div>
-        </div>
+               <img src="img/song2.jpg" class="current-song-image">
+           <div>
+               <p class="current-song-name">Tamma Tamma Again</p>
+               <p class="current-song-album">Badrinath ki Dulhania</p>
+           </div>
+           </div>
             
-          <button class="btn animated wobble"> <a href="index-drumkit.html">Play Drum !</a></button>
+                <button class="btn animated wobble"> <a href="index-drumkit.html">Play Drum !</a></button>
          
             </section>
-             
-                            
+            
+                               
             <footer>
                 <div class="controls">
                     <div class="player-buttons">
@@ -110,10 +128,13 @@
                     </div>
                 </div>
             </footer>
-        </div>
-        <input type="file">
-<audio id="myAudio"  autoplay></audio>
-    </div>
+
+
+            </div>
+            </div>
+                         
+            </div>
+           </div>
     
  
 
