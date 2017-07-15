@@ -266,18 +266,22 @@ table.dataTable tbody tr {
     
     
     border: none;
-    font-size: 17px;
+    font-size: 16px;
     border-radius: 20px;
 }
 
-  
+ input, optgroup, select, textarea {
+    margin: 0;
+    font-weight: normal;
+    color: black !important;
+} 
 
  
 tbody td {
     padding: 20px 10px;
     background-color:#282828;
     text-align: left;
-    font-size: 17px;
+    font-size: 15px;
 }
 tbody td:hover {
     
@@ -287,7 +291,7 @@ tbody td:hover {
 
 thead td {
     padding: 10px 18px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid gray;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     
@@ -377,4 +381,20 @@ a{
     margin-top: 50px;
     margin-left: 20px;
     
+}
+
+
+.marg2{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: gray;
+ 
+ 
+    
+}
+
+#num-songs{
+  color: greenyellow;
+      font-weight: bold;
+ 
 }

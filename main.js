@@ -316,7 +316,10 @@ $('input').on('change', function(e) {
 });
  
  
- 
+ $(function(){
+     var totalSongs = songs.length;
+     $('#num-songs').text(totalSongs);
+ });
 
  // --------------------------------------------------------------------------------
 
