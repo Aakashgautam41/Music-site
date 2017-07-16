@@ -121,7 +121,7 @@ $('audio').on('ended',function() {
     }
 })
 
-//
+
 //$('audio').on('ended',function() {
 //    var audio = document.querySelector('audio');
 //    if (willShuffle == 1) {
@@ -295,7 +295,7 @@ $('audio').on('ended',function() {
       }
     });
     
- // --------------------------------- progress bar finc.----------------------------
+ // --------------------------------- play local song func.----------------------------
 
  
 var $audio = $('#myAudio');
@@ -314,8 +314,8 @@ $('input').on('change', function(e) {
         reader.readAsDataURL(file);
     }
 });
- 
- 
+
+ // -------------------------------- total songs in playlist ----------------------- 
  $(function(){
      var totalSongs = songs.length;
      $('#num-songs').text(totalSongs);
@@ -323,6 +323,17 @@ $('input').on('change', function(e) {
 
  // --------------------------------------------------------------------------------
 
+ // --------------------------------------------------------------------------------
+   $('.fwd').click(function(){
+        var song = document.querySelector("audio");
+        for(i=1; i<songs.length;i++)
+            {
+              song = songs[i];
+                toggleSong();
+            }
+ 
+       
+   })
 
 
 // ------------------------------------- Current time & duration of song ------------

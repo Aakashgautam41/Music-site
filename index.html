@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Song App</title>
+    <title> Musicfy</title>
+    <link rel="icon" href="img/Musicfy-favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="font-awesome.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="animate.css">
@@ -17,7 +18,7 @@
 <body>
     <div class="wrapper">
         <section class="welcome-screen hidden">
-            <h1 class="animated bounce"> Welcome to Songify </h1>
+            <h1 class="animated bounce"> Welcome to Musicfy </h1>
             <h3> Enter name to access your account </h3>
             <div class="input-wrapper">
                 <form action="">
@@ -36,22 +37,24 @@
             </header>
             
             <div class="row">
+<!---------------------------------------- left section -------------------------------------------------------->
                 <div class="col-md-2">
                    <div>
-                     
+                          
                       <div class="marg"><span> Select local files on computer</span> </div>
                       <input type="file" id="local">
                       <audio id="myAudio"  autoplay></audio> 
+                      
                    </div>
                    <div class="marg2">
                       <p> Total songs in playlist : <span id="num-songs"> </span></p> 
                    </div>
   
                 </div>
-                
+<!---------------------------------------- left section end -------------------------------------------------->
                    
                    
-                   
+<!----------------------------------------- main section start ----------------------------------------------->
                 <div class="col-md-10">
                 <section class="content">
                 <audio src="song1.mp3"></audio>
@@ -98,10 +101,10 @@
                  
            </div>
            <div class="current-song-wrapper">
-               <img src="img/song2.jpg" class="current-song-image">
+               <img src="img/song1.jpg" class="current-song-image">
            <div>
-               <p class="current-song-name">Tamma Tamma Again</p>
-               <p class="current-song-album">Badrinath ki Dulhania</p>
+               <p class="current-song-name">Boulevard of broken dreams</p>
+               <p class="current-song-album">American Idiot</p>
            </div>
            </div>
             
@@ -133,6 +136,7 @@
 
 
             </div>
+<!----------------------------------------------- main section end ---------------------------------------->
             </div>
                          
             </div>

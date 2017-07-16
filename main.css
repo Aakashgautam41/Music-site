@@ -130,10 +130,10 @@ h3{
 }
 
 .progress-filled {
-    background-color: lightskyblue;
+    background-color:#59a196;
     height: 8px;
-    border-radius: 4px;
-    width: 50%;
+    border-radius: 5px;
+    width: 44%;
 
 }
 
@@ -388,6 +388,7 @@ a{
     margin-top: 20px;
     margin-left: 20px;
     background-color: gray;
+    padding-left: 10px;
  
  
     

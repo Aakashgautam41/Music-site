@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
+  <title>Virtual Drum Kit</title>
+  <link rel="icon" href="img/Musicfy-favicon.png" type="image/x-icon"/>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animate.css">
 </head>
+<!--
+
+<style>
+    body{
+        background: url(img/drum2.jpeg);
+        background-size: cover;
+    }   
+    
+</style>
+-->
+
 <body>
    
   
@@ -67,6 +80,9 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
+
+
+<script src="jquery.js"></script>
 <script>
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
@@ -87,10 +103,102 @@
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
     
+ 
     
-// $('.img').keypress(function(){
-//     $('img').addClass(animated shake);
-// });
+     $("body").keypress(function(event){
+         
+        if(event.keyCode == 65)
+            {
+               $("img").toggleClass('animated shake');                 // Here togglesong func. is called
+      }
+    });  
+    
+   
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 83)
+            {
+               $("img").toggleClass('animated tada');                  // Here togglesong func. is called
+      }
+    });    
+    
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 68)
+            {
+               $("img").toggleClass('animated jello');                  // Here togglesong func. is called
+      }
+    });    
+   
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 70)
+            {
+               $("img").toggleClass('animated wobble');                  // Here togglesong func. is called
+      }
+    });    
+  
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 71)
+            {
+               $("img").toggleClass('animated bounce');                  // Here togglesong func. is called
+      }
+    });   
+    
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 72)
+            {
+               $("img").toggleClass('animated jello');                  // Here togglesong func. is called
+      }
+    });    
+   
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 74)
+            {
+               $("img").toggleClass('animated wobble');                  // Here togglesong func. is called
+      }
+    });    
+   
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 75)
+            {
+               $("img").toggleClass('animated tada');                  // Here togglesong func. is called
+      }
+    });   
+  
+    
+    $("body").keypress(function(event){
+         
+        if(event.keyCode == 76)
+            {
+               $("img").toggleClass('animated jello');                  // Here togglesong func. is called
+      }
+    }); 
+    
+//        $("body").click(function(event){
+//         
+//         
+//               $(".btn").addClass('animated shake');                  // Here togglesong func. is called
+//     
+//    });
+//    
+    
+//      $(function(){                             //   fading effect using jquery
+//  $("h1").click(function(){
+//    $("img").fadeTo(1000,0.3)
+//      });
+//  });
+
 </script>
 
 
