@@ -105,52 +105,64 @@ function timeJump() {
 
 
 
-
-$('audio').on('ended',function() {
+ $('audio').on('ended',function() {
     var audio = document.querySelector('audio');
     if(currentSongNumber < 4) {
+          console.log('if');
         var nextSongObj = songs[currentSongNumber];
-        audio.src = nextSongObj.fileName; // Change Soure
-        toggleSong(); // Play Next Song
-        changeCurrentSongDetails(nextSongObj); // Update Image
-        currentSongNumber = currentSongNumber + 1; // Change State
+        audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber = currentSongNumber + 1;
+    }
+    else if(willLoop == 1) {
+        console.log('else if');
+        var nextSongObj = songs[0];
+        audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber =  1;
     }
     else {
+          console.log('else ');
         $('.play-icon').removeClass('fa-pause').addClass('fa-play');
         audio.currentTime = 0;
     }
 })
 
-
-//$('audio').on('ended',function() {
-//    var audio = document.querySelector('audio');
-//    if (willShuffle == 1) {
-//        var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
-//        var nextSongObj = songs[nextSongNumber-1];
-//        audio.src = nextSongObj.fileName;
-//        toggleSong();
-//        changeCurrentSongDetails(nextSongObj);
-//        currentSongNumber = nextSongNumber;
-//    }
-//    else if(currentSongNumber < 4) {
-//        var nextSongObj = songs[currentSongNumber];
-//        audio.src = nextSongObj.fileName;
-//        toggleSong();
-//        changeCurrentSongDetails(nextSongObj);
-//        currentSongNumber = currentSongNumber + 1;
-//    }
-//    else if(willLoop == 1) {
-//        var nextSongObj = songs[0];
-//        audio.src = nextSongObj.fileName;
-//        toggleSong();
-//        changeCurrentSongDetails(nextSongObj);
-//        currentSongNumber =  1;
-//    }
-//    else {
-//        $('.play-icon').removeClass('fa-pause').addClass('fa-play');
-//        audio.currentTime = 0;
-//    }
-//})
+$('audio').on('ended',function() {
+    var audio = document.querySelector('audio');
+    if (willShuffle == 1) {
+          console.log(' shuffle if');
+        var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
+        var nextSongObj = songs[nextSongNumber-1];
+        audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber = nextSongNumber;
+    }
+    else if(currentSongNumber < 4) {
+         console.log('if else current song');
+        var nextSongObj = songs[currentSongNumber];
+        audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber = currentSongNumber + 1;
+    }
+    else if(willLoop == 1) {
+         console.log('else if willloop');
+        var nextSongObj = songs[0];
+        audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber =  1;
+    }
+    else {
+         console.log(' shuffle else');
+        $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+        audio.currentTime = 0;
+    }
+})
 
  // -------------------------------------------------------------------------------
     
@@ -323,17 +335,43 @@ $('input').on('change', function(e) {
 
  // --------------------------------------------------------------------------------
 
- // --------------------------------------------------------------------------------
-   $('.fwd').click(function(){
+ // --------------------------------- forward button -------------------------------
+   $('.fa-step-forward').click(function(){
         var song = document.querySelector("audio");
-        for(i=1; i<songs.length;i++)
-            {
-              song = songs[i];
-                toggleSong();
-            }
+        if(currentSongNumber <songs.length) {
+          
+        var nextSongObj = songs[currentSongNumber];
+     //   audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber = currentSongNumber + 1;
+    }
+       else{
+           $('.fa-step-forward').addClass('disabled');
+       }
  
+      });   
        
-   })
+        $('.fa-step-backward').click(function(){
+        var song = document.querySelector("audio");
+        if(currentSongNumber <songs.length) {
+      
+        var nextSongObj = songs[currentSongNumber];
+        //audio.src = nextSongObj.fileName;
+        toggleSong();
+        changeCurrentSongDetails(nextSongObj);
+        currentSongNumber = currentSongNumber - 1;
+    }
+       else{
+           $('.fa-step-backward').addClass('disabled');
+       }
+       
+       
+        });
+       
+       
+       
+ 
 
 
 // ------------------------------------- Current time & duration of song ------------
