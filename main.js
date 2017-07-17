@@ -134,7 +134,7 @@ $('audio').on('ended',function() {
     var audio = document.querySelector('audio');
     if (willShuffle == 1) {
           console.log(' shuffle if');
-        var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
+        var nextSongNumber = randomExcluded(1,4,currentSongNumber);
         var nextSongObj = songs[nextSongNumber-1];
         audio.src = nextSongObj.fileName;
         toggleSong();
@@ -235,7 +235,7 @@ $('audio').on('ended',function() {
 
 
     function addSongNameClickEvent(songObj,position) {
-   // var songName = songs.fileName; // New Variable
+         var songName = songs.fileName; // New Variable
          var songName = songObj.fileName; // New Variable 
         var id = '#song'+ position;
       $(id).click(function() {
@@ -337,11 +337,11 @@ $('input').on('change', function(e) {
 
  // --------------------------------- forward button -------------------------------
    $('.fa-step-forward').click(function(){
-        var song = document.querySelector("audio");
+        var audio = document.querySelector("audio");
         if(currentSongNumber <songs.length) {
           
         var nextSongObj = songs[currentSongNumber];
-     //   audio.src = nextSongObj.fileName;
+        audio.src = nextSongObj.fileName;
         toggleSong();
         changeCurrentSongDetails(nextSongObj);
         currentSongNumber = currentSongNumber + 1;
@@ -353,11 +353,11 @@ $('input').on('change', function(e) {
       });   
        
         $('.fa-step-backward').click(function(){
-        var song = document.querySelector("audio");
+        var audio = document.querySelector("audio");
         if(currentSongNumber <songs.length) {
       
         var nextSongObj = songs[currentSongNumber];
-        //audio.src = nextSongObj.fileName;
+        audio.src = nextSongObj.fileName;
         toggleSong();
         changeCurrentSongDetails(nextSongObj);
         currentSongNumber = currentSongNumber - 1;
