@@ -17,15 +17,16 @@
      
 <body>
     <div class="wrapper">
-        <section class="welcome-screen">
-            <h1 class="animated bounce"> Welcome to Musicfy </h1>
+        <section class="welcome-screen ">
+            <div id="typed-strings"> <h1 class="hdr"> Welcome to <span class="musicfy">Musicfy</span></h1> </div>
+            <span id="typed"></span>
             <h3> Enter name to access your account </h3>
             <div class="input-wrapper">
                 <form action="">
                      <div class="blk">
-                         <input type="text" placeholder=" Name" id="name-input"><br>
-                         <input type="text" placeholder=" test@acadview.com *" id="email-input"><br>
-                         <input type="text" placeholder=" JavascriptRocks *" id="pass-input">
+                         <input type="text" placeholder=" Name" id="name-input" class="inpu"><br>
+                         <input type="text" placeholder=" test@acadview.com *" id="email-input" class="inpu"><br>
+                         <input type="text" placeholder=" JavascriptRocks *" id="pass-input" class="inpu">
                      </div>
                 </form>
                 <button class="btn2"> <b>Go</b> </button>
@@ -41,7 +42,7 @@
                 <div class="col-md-2">
                    <div>
                           
-                      <div class="marg"><span> Select local files on computer</span> </div>
+                      <div class="marg"><span> Play local songs on computer</span> </div>
                       <input type="file" id="local">
                       <audio id="myAudio"  autoplay></audio> 
                       
@@ -145,6 +146,7 @@
  
 
 <script src="jquery.js"> </script>
+<script src="typed.js"></script>
 <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
 </script>
 <script src="main.js"></script>

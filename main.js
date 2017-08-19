@@ -39,7 +39,13 @@
  
 
 
-
+ var typed = new Typed("#typed", {
+    stringsElement: '#typed-strings',
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop : true
+ 
+  });
 
 
 
@@ -306,6 +312,25 @@ $('audio').on('ended',function() {
                 toggleSong();                   // Here togglesong func. is called
       }
     });
+
+
+
+
+    
+ // --------------------------- input enter event -------------------------------------
+//     $("#name-input").keypress(function(event){
+//          var name = $('#name-input').val();                                  // name stores the value from input 
+//         var target = event.target;
+//        if( event.keyCode == 13 && target.tagName !='BODY'&& name.length>3)
+//      {
+//      var message = "Welcome, " + name;
+//      $('.main .user-name').text(message);
+//      $('.welcome-screen').addClass('hidden');
+//      $('.main').removeClass('hidden');
+//      $(".content h1").text(message);                  // Here togglesong func. is called
+//      }
+//    });
+//    
     
  // --------------------------------- play local song func.----------------------------
 
