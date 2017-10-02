@@ -4,30 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title> Musicfy</title>
-    <link rel="icon" href="img/Musicfy-favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="img/Musicfy-favicon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="font-awesome.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   
+
 
 </head>
-     
+
 <body>
     <div class="wrapper">
         <section class="welcome-screen ">
-            <div id="typed-strings"> <h1 class="hdr"> Welcome to <span class="musicfy">Musicfy</span></h1> </div>
+            <div id="typed-strings">
+                <h1 class="hdr"> Welcome to <span class="musicfy">Musicfy</span></h1>
+            </div>
             <span id="typed"></span>
             <h3> Enter name to access your account </h3>
             <div class="input-wrapper">
                 <form action="">
-                     <div class="blk">
-                         <input type="text" placeholder=" Name" id="name-input" class="inpu"><br>
-                         <input type="text" placeholder=" test@acadview.com *" id="email-input" class="inpu"><br>
-                         <input type="text" placeholder=" JavascriptRocks *" id="pass-input" class="inpu">
-                     </div>
+                    <div class="blk">
+                        <input type="text" placeholder=" Name" id="name-input"><br>
+                        <input type="text" placeholder=" Enter Email (not required)" id="email-input"><br>
+                        <!--                   <input type="text" placeholder=" JavascriptRocks *" id="pass-input" class="inpu">-->
+                    </div>
                 </form>
                 <button class="btn2"> <b>Go</b> </button>
             </div>
@@ -36,120 +38,128 @@
             <header>
                 <div class="right floated user-name"> </div>
             </header>
-            
+
             <div class="row">
-<!---------------------------------------- left section -------------------------------------------------------->
+                <!---------------------------------------- left section -------------------------------------------------------->
                 <div class="col-md-2">
-                   <div>
-                          
-                      <div class="marg"><span> Play local songs on computer</span> </div>
-                      <input type="file" id="local">
-                      <audio id="myAudio"  autoplay></audio> 
-                      
-                   </div>
-                   <div class="marg2">
-                      <p> Total songs in playlist : <span id="num-songs"> </span></p> 
-                   </div>
-  
+                    <div>
+
+                        <div class="marg"><span> Play local songs on computer</span> </div>
+                        <input type="file" id="local">
+                        <audio id="myAudio" autoplay></audio>
+
+                    </div>
+                    <div class="marg2">
+                        <p> Total songs in playlist : <span id="num-songs"> </span></p>
+                    </div>
+
                 </div>
-<!---------------------------------------- left section end -------------------------------------------------->
-                   
-                   
-<!----------------------------------------- main section start ----------------------------------------------->
+                <!---------------------------------------- left section end -------------------------------------------------->
+
+
+                <!----------------------------------------- main section start ----------------------------------------------->
                 <div class="col-md-10">
-                <section class="content">
-                <audio src="song1.mp3"></audio>
-                <audio src="song2.mp3"></audio>
-                <audio src="song3.mp3"></audio>
-                <audio src="song4.mp3"></audio>
-           <div class="songs">
-                
-           <table id="songs">
-            <thead class="list-headers">
-            <tr><td> Title </td>
-            <td> Artist </td>
-            <td> Album </td>
-            <td> Duration </td>
-        </tr></thead>
-        <!-- <div class="song-list"> -->
-            <tbody><tr class="song" id="song1">
-                <td class="song-name"></td>
-                <td class="song-artist"></td>
-                <td class="song-album"></td>
-                <td class="song-length"></td>
-            </tr>
-            <tr class="song" id="song2">
-                <td class="song-name"></td>
-                <td class="song-artist"></td>
-                <td class="song-album"></td>
-                <td class="song-length"></td>
-            </tr>
-            <tr class="song" id="song3">
-                <td class="song-name"></td>
-                <td class="song-artist"></td>
-                <td class="song-album"></td>
-                <td class="song-length"></td>
-            </tr>
-            <tr class="song" id="song4">
-                <td class="song-name"></td>
-                <td class="song-artist"></td>
-                <td class="song-album"></td>
-                <td class="song-length"></td>
-            </tr>
-        <!-- </div> -->
-            </tbody>
-            </table>
-                 
-           </div>
-           <div class="current-song-wrapper">
-               <img src="img/song1.jpg" class="current-song-image">
-           <div>
-               <p class="current-song-name">Boulevard of broken dreams</p>
-               <p class="current-song-album">American Idiot</p>
-           </div>
-           </div>
-            
-                <button class="btn animated wobble"> <a href="index-drumkit.html">Play Drum !</a></button>
-         
-            </section>
-            
-                               
-            <footer>
-                <div class="controls">
-                    <div class="player-buttons">
-                       <i class="fa fa-random disabled " aria-hidden="true"></i>
-                        <i class="fa fa-step-backward bwd" aria-hidden="true"></i>
-                        
-                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
-                        <i class="fa fa-step-forward fwd" aria-hidden="true"></i>
-                        <i class="fa fa-repeat disabled" aria-hidden="true"></i>
-                         
-                    </div>
-                    <div class="progress-wrapper">
-                        <span class="time-elapsed"> </span>
-                        <div class="player-progress">
-                            <div class="progress-filled"> </div>
+                    <section class="content">
+                        <audio src="song1.mp3"></audio>
+                        <audio src="song2.mp3"></audio>
+                        <audio src="song3.mp3"></audio>
+                        <audio src="song4.mp3"></audio>
+                        <div class="songs">
+
+                            <table id="songs">
+                                <thead class="list-headers">
+                                    <tr>
+                                        <td> Title </td>
+                                        <td> Artist </td>
+                                        <td> Album </td>
+                                        <td> Duration </td>
+                                    </tr>
+                                </thead>
+                                <!-- <div class="song-list"> -->
+                                <tbody>
+                                    <tr class="song" id="song1">
+                                        <td class="song-name"></td>
+                                        <td class="song-artist"></td>
+                                        <td class="song-album"></td>
+                                        <td class="song-length"></td>
+                                    </tr>
+                                    <tr class="song" id="song2">
+                                        <td class="song-name"></td>
+                                        <td class="song-artist"></td>
+                                        <td class="song-album"></td>
+                                        <td class="song-length"></td>
+                                    </tr>
+                                    <tr class="song" id="song3">
+                                        <td class="song-name"></td>
+                                        <td class="song-artist"></td>
+                                        <td class="song-album"></td>
+                                        <td class="song-length"></td>
+                                    </tr>
+                                    <tr class="song" id="song4">
+                                        <td class="song-name"></td>
+                                        <td class="song-artist"></td>
+                                        <td class="song-album"></td>
+                                        <td class="song-length"></td>
+                                    </tr>
+                                    <!-- </div> -->
+                                </tbody>
+                            </table>
+
                         </div>
-                        <span class="song-duration"></span>
-                    </div>
+                        <div class="current-song-wrapper">
+                            <img src="img/song1.jpg" class="current-song-image">
+                            <div>
+                                <p class="current-song-name">Boulevard of broken dreams</p>
+                                <p class="current-song-album">American Idiot</p>
+                            </div>
+                        </div>
+
+                        <button class="btn animated wobble"> <a href="index-drumkit.html">Play Drum !</a></button>
+
+                    </section>
+
+
+                    <footer>
+                        <div class="controls">
+                            <div class="player-buttons">
+                                <i class="fa fa-random disabled " aria-hidden="true"></i>
+                                <i class="fa fa-step-backward bwd" aria-hidden="true"></i>
+
+                                <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                                <i class="fa fa-step-forward fwd" aria-hidden="true"></i>
+                                <i class="fa fa-repeat disabled" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="progress-wrapper">
+                                <span class="time-elapsed"> </span>
+                                <div class="player-progress">
+                                    <div class="progress-filled"> </div>
+                                </div>
+                                <span class="song-duration"></span>
+                            </div>
+                        </div>
+                    </footer>
+
+
                 </div>
-            </footer>
-
-
+                <!----------------------------------------------- main section end ---------------------------------------->
             </div>
-<!----------------------------------------------- main section end ---------------------------------------->
-            </div>
-                         
-            </div>
-           </div>
-    
- 
 
-<script src="jquery.js"> </script>
-<script src="typed.js"></script>
-<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
-</script>
-<script src="main.js"></script>
- </body>
+        </div>
+    </div>
 
- </html>
+
+
+    <script src="jquery.js">
+
+
+    </script>
+    <script src="typed.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+
+
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

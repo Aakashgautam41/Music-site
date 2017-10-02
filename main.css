@@ -19,9 +19,9 @@ h1 {
     margin: 0;
 }
 
-.welcome-screen #typed-strings h1{
-   color:red;
-  
+.welcome-screen #typed-strings h1 {
+    color: red;
+
 }
 
 .wrapper {
@@ -31,11 +31,11 @@ h1 {
 }
 
 .welcome-screen {
-    background-image:url(img/pexels-photo-89957.jpeg);
+    background-image: url(img/pexels-photo-89957.jpeg);
     background-size: cover;
-    color:black;
+    color: black;
     font-size: 13px;
-    
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -43,6 +43,7 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
 /*
 h1 {
   animation-duration: s;
@@ -53,59 +54,65 @@ h1 {
     
 }
 */
-#typed{
+
+#typed {
     color: white;
     font-size: 35px;
-    margin-bottom:8px;
+    margin-bottom: 8px;
 }
-.typed-cursor{
+
+.typed-cursor {
     display: none;
 }
-.musicfy{
-    color:#f39c12;
+
+.musicfy {
+    color: #f39c12;
 }
- h3{
+
+h3 {
     font-size: 18px ! important;
     margin-top: -0px ! important;
     color: white ! important;
 }
-.btn{
-  animation-duration:10s;
-  animation-delay: 1s;
-  animation-iteration-count:infinite;
+
+.btn {
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
 }
+
 .main {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     color: white;
-    background-color:#282828;
+    background-color: #282828;
 }
 
 
 .main header {
     height: 50px;
-    background-color:#5e4485;
+    background-color: #5e4485;
     padding: 1rem;
     color: white;
     font-size: 16px;
-     
+
 }
 
 .main .content {
-    flex:1;
-    background-color:#282828;
+    flex: 1;
+    background-color: #282828;
 }
 
 .main footer {
     height: 80px;
-    background-color:#282828;
+    background-color: #282828;
     padding-top: 1rem;
 }
 
 .player-buttons {
-    display:flex;
+    display: flex;
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -148,22 +155,23 @@ h1 {
 }
 
 .progress-filled {
-    background-color:#59a196;
+    background-color: #59a196;
     height: 8px;
     border-radius: 5px;
     width: 44%;
 
 }
 
-#email-input{
+#email-input {
     margin-top: 7px;
 }
-#pass-input{
+
+#pass-input {
     margin-top: 7px;
     margin-bottom: 7px;
 }
- 
- 
+
+
 .main .content {
     width: 800px;
     margin: 2rem auto;
@@ -171,8 +179,8 @@ h1 {
 
 .list-headers {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
 }
 
 .list-headers > div {
@@ -191,7 +199,7 @@ h1 {
 .song-list .song {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     min-height: 30px;
     cursor: pointer;
 }
@@ -202,13 +210,14 @@ h1 {
     overflow: hidden;
     height: 1rem;
 }
+
 .song > span:first-child {
     width: 330px;
 }
 
 .song .song-duration {
     text-align: right;
-   
+
 }
 
 .song-list .song:hover {
@@ -223,7 +232,7 @@ h1 {
 .progress-wrapper span {
     color: black;
 }
- 
+
 .song > span {
     display: inline-block;
     width: 150px;
@@ -233,6 +242,7 @@ h1 {
 .content {
     position: relative;
 }
+
 .current-song-wrapper {
     position: absolute;
     bottom: 0;
@@ -260,19 +270,22 @@ h1 {
 }
 
 
-            /*DataTables overrides*/
+/*DataTables overrides*/
+
 table.dataTable tbody tr {
     background-color: #282828;
     color: white;
 }
+
 #songs_info {
     display: none;
 }
 
 #songs_filter {
     color: white;
-  
+
 }
+
 #songs_filter input {
     width: 100px;
     margin-bottom: 1rem;
@@ -281,30 +294,34 @@ table.dataTable tbody tr {
 
 #songs_filter input {
     width: 300px;
-    
-    
+
+
     border: none;
     font-size: 16px;
     border-radius: 20px;
 }
 
- input, optgroup, select, textarea {
+input,
+optgroup,
+select,
+textarea {
     margin: 0;
     font-weight: normal;
     color: black !important;
-} 
+}
 
- 
+
 tbody td {
     padding: 20px 10px;
-    background-color:#282828;
+    background-color: #282828;
     text-align: left;
     font-size: 15px;
 }
+
 tbody td:hover {
-    
-    background-color:#59a196;
-     
+
+    background-color: #59a196;
+
 }
 
 thead td {
@@ -312,80 +329,84 @@ thead td {
     border-bottom: 1px solid gray;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    
+
 }
+
 table.dataTable.no-footer {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray !important;
-    
+
 }
- 
- 
- 
- table.dataTable thead td {
+
+
+
+table.dataTable thead td {
     padding: 10px 18px;
     border-bottom: 1px solid gray !important;
-    
+
 }
 
-#songs{
-/*    height: 200px;*/
-    width:800px !important;
+#songs {
+    /*    height: 200px;*/
+    width: 800px !important;
 }
-
-.inpu{
+input {
     margin-bottom: 2px;
     padding: 4px;
     border-radius: 4px;
     border: none;
 }
-.btn2{
+
+.btn2 {
     width: 175px;
     height: 35px;
     border: none;
     border-radius: 5px;
-    background-color:#c0392b;
+    background-color: #c0392b;
     font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn2:hover {
+    width: 175px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2980b9;
     color: white;
 }
 
-.btn2:hover{
-    width: 175px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-    background-color:#2980b9;
-    color: white;
-}
-.fa{
+.fa {
     margin-left: 40px;
 }
+
 .fa.disabled {
     color: gray;
 }
 
 /* -------------------------------------  Drum kit button ---------------------------------------------*/
 
-.btn{
+.btn {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color:lightseagreen;
+    background-color: lightseagreen;
     border: none;
-    border-radius:50px !important;
+    border-radius: 50px !important;
     font-size: 18px;
     color: white;
     margin-left: 650px;
     margin-top: 150px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white !important;
 }
 
- 
+
 
 
 
@@ -394,34 +415,33 @@ a{
 
 /* ----------------------------------------------------------------------------------------------------*/
 
-
-#local{
+#local {
     margin-top: 10px;
     margin-left: 20px;
     background-color: gray;
-    
+
 }
 
-.marg{
+.marg {
     margin-top: 50px;
     margin-left: 20px;
     width: 600px;
-    
+
 }
 
 
-.marg2{
+.marg2 {
     margin-top: 20px;
     margin-left: 20px;
     background-color: gray;
     padding-left: 10px;
- 
- 
-    
+
+
+
 }
 
-#num-songs{
-  color: greenyellow;
-      font-weight: bold;
- 
+#num-songs {
+    color: greenyellow;
+    font-weight: bold;
+
 }
